@@ -25,6 +25,12 @@ class GdprApplicationListener {
      */
     const SCRIPT_TRANSLATOR = 'js/translator.js';
 
+	/**
+	 * Path to the css
+	 * @var string
+	 */
+	const STYLES = 'css/gdpr.css';
+
     /**
      * Flag to see if the GDPR listener should be added no matter what
      * @var boolean
@@ -44,6 +50,7 @@ class GdprApplicationListener {
         $view = $response->getView();
 
         if ($this->shouldAddGdpr($request, $response, $view)) {
+        	$view->addStyle($request->getBaseUrl() . '/' . self::STYLES);
             $view->addJavascript($request->getBaseUrl() . '/' . self::SCRIPT_TRANSLATOR);
             $view->addJavascript($request->getBaseUrl() . '/' . self::SCRIPT_COOKIEMONSTER);
         }

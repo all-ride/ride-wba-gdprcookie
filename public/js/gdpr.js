@@ -4,7 +4,7 @@
 
     var CookieMonster = function () {
         var cookieWrapper;
-        var __cookieCheckerCookieName = '__cookieCheckerCookieName';
+        var __cookieCheckerCookieName = '__cookieGdpr';
 
         var _init = function () {
             var shouldRun = _getCookie(__cookieCheckerCookieName) ? false : true;
@@ -26,10 +26,10 @@
             var checkboxvar = document.getElementById(checkbox);
             var labelvar = document.getElementById(checkbox + 'Label');
             if (checkboxvar.checked == false) {
-                labelvar.innerHTML = "niet actief";
+                labelvar.innerHTML = rideApp.translator.translate('notactive.gdpr');
             }
             else {
-                labelvar.innerHTML = "actief";
+                labelvar.innerHTML = rideApp.translator.translate('active.gdpr');
             }
         };
 
@@ -42,7 +42,7 @@
             cookieWrapper.innerHTML = '<div class="section section--light"><div class="container"><div class="cookie__wrapper">' +
                 '<div class="cookie__body">' + rideApp.translator.translate('body.notice.gdpr') + '</div>' +
                 '<div class="cookie__cta inline"><a href="#" class="inline__item cookiemonster__settings js-cookie-settings">' + rideApp.translator.translate('settings.notice.gdpr') + '</a>>' +
-                '<a href="#" class="inline__item btn btn--ext cookiemonster__accept js-cookie-accept">' + rideApp.translator.translate('accept.notive.gdpr') + '</a></div>' +
+                '<a href="#" class="inline__item btn btn--ext cookiemonster__accept js-cookie-accept">' + rideApp.translator.translate('accept.notice.gdpr') + '</a></div>' +
                 // '<a href="#" class="cookiemonster__close js-cookie-close">&times;</a>' +
 
                 '</div></div></div>';
@@ -54,7 +54,7 @@
         };
 
         var _renderCookieModal = function () {
-            var cookieModal = document.getElementById('cookiemodal');
+            var cookieModal = document.getElementById('cookieModal');
 
             //check if the modal was already opened before
             if (cookieModal) {
@@ -74,15 +74,15 @@
 
                 '<p class="spacer"><strong class="cookie__title">' + rideApp.translator.translate('title.essential.modal.gdpr') + '</strong><br>' +
                 rideApp.translator.translate('text.essential.modal.gdpr') +
-                '<br><label>' + rideApp.translator.translate('altijd actief') + '</label>' +
+                '<br><label>' + rideApp.translator.translate('alwaysactive.gdpr') + '</label>' +
 
                 '</p><p><strong class="cookie__title">' + rideApp.translator.translate('title.performance.modal.gdpr') + '</strong><br>' +
                 rideApp.translator.translate('text.performance.modal.gdpr') +
-                '<br><input class="js-cookie-performance" type="checkbox" name="" id="CookiePerformance" value="' + rideApp.translator.translate('altijd actief') + '"> <label id="CookiePerformanceLabel">' + rideApp.translator.translate('altijd actief') + '</label>' +
+                '<br><input class="js-cookie-performance" type="checkbox" name="CookiePerformance" id="CookiePerformance" value="2"> <label id="CookiePerformanceLabel">' + rideApp.translator.translate('active.gdpr') + '</label>' +
 
                 '</p><p><strong class="cookie__title">' + rideApp.translator.translate('title.marketing.modal.gdpr') + '</strong><br>' +
                 rideApp.translator.translate('text.marketing.modal.gdpr') +
-                '<br><input class="js-cookie-marketing" type="checkbox" name="" id="CookieMarketing" value="' + rideApp.translator.translate('altijd actief') + '"> <label id="CookieMarketingLabel">' + rideApp.translator.translate('altijd actief') + '</label>' +
+                '<br><input class="js-cookie-marketing" type="checkbox" name="CookieMarketing" id="CookieMarketing" value="3"> <label id="CookieMarketingLabel">' + rideApp.translator.translate('active.gdpr') + '</label>' +
 
                 '</p></form>' +
                 '<p class="text--center spacer"><a href="#" class="btn js-modal-close">' + rideApp.translator.translate('close.modal.gdpr') + '</a></p>' +
@@ -112,11 +112,11 @@
                 _closeCookieModal();
 
             } else if (_hasClass(element, 'js-cookie-performance')) {
-                _setCookie('performance', '365');
+                _setCookie('performance', '2');
                 _checked('CookiePerformance');
 
             } else if (_hasClass(element, 'js-cookie-marketing')) {
-                _setCookie('marketing', '365');
+                _setCookie('marketing', '3');
                 _checked('CookieMarketing');
             }
 

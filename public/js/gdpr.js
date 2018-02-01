@@ -41,7 +41,7 @@
             cookieWrapper.className = 'cookiemonster';
             cookieWrapper.innerHTML = '<div class="section section--light"><div class="container"><div class="cookie__wrapper">' +
                 '<div class="cookie__body">' + rideApp.translator.translate('body.notice.gdpr') + '</div>' +
-                '<div class="cookie__cta inline"><a href="#" class="inline__item cookiemonster__settings js-cookie-settings">' + rideApp.translator.translate('settings.notice.gdpr') + '</a>>' +
+                '<div class="cookie__cta inline"><a href="#" class="inline__item cookiemonster__settings js-cookie-settings">' + rideApp.translator.translate('settings.notice.gdpr') + '</a>' +
                 '<a href="#" class="inline__item btn btn--ext cookiemonster__accept js-cookie-accept">' + rideApp.translator.translate('accept.notice.gdpr') + '</a></div>' +
                 // '<a href="#" class="cookiemonster__close js-cookie-close">&times;</a>' +
 

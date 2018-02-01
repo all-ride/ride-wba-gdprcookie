@@ -1,5 +1,8 @@
 {
     "button.cookiemonster": "Toestaan",
     "label.cookiemonster": "Wij gebruiken cookies om u de best mogelijke ervaring te geven op deze website.",
-    "title.cookiemonster": "Cookies op deze website"
+    "title.cookiemonster": "Cookies op deze website",
+    "body.notice.gdpr": "We gebruiken cookies om je een betere surf-ervaring aan te bieden. Lees hoe we cookies gebruiken en hoe je kan bepalen wat op jouw bezoek van toepassing is door te klikken op 'Cookie instellingen'",
+    "settings.notice.gdpr": "Cookie instellingen",
+    "accept.notive.gdpr": "Akkoord"
 }

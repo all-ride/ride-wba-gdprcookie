@@ -4,5 +4,17 @@
     "title.cookiemonster": "Cookies op deze website",
     "body.notice.gdpr": "We gebruiken cookies om je een betere surf-ervaring aan te bieden. Lees hoe we cookies gebruiken en hoe je kan bepalen wat op jouw bezoek van toepassing is door te klikken op 'Cookie instellingen'",
     "settings.notice.gdpr": "Cookie instellingen",
-    "accept.notive.gdpr": "Akkoord"
+    "accept.notice.gdpr": "Akkoord",
+    "title.modal.gdpr": "Cookie instellingen",
+    "intro.modal.gdpr": "Cookie instellingen intro",
+    "title.essential.modal.gdpr": "Essentiële cookies",
+    "text.essential.modal.gdpr": "Essentiële tekst",
+    "title.performance.modal.gdpr": "Performance cookies",
+    "text.performance.modal.gdpr": "Performance tekst",
+    "title.marketing.modal.gdpr": "Marketing cookies",
+    "text.marketing.modal.gdpr": "Marketing tekst",
+    "close.modal.gdpr": "Sluiten",
+    "active.gdpr": "actief",
+    "alwaysactive.gdpr": "altijd actief",
+    "notactive.gdpr": "niet actief"
 }

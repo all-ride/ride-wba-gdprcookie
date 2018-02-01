@@ -4,6 +4,17 @@
     "title.cookiemonster": "Cookies on this website",
     "body.notice.gdpr": "We use cookies to offer you a better browsing experience. Read about how we use cookies and how you can control them by clicking 'Cookie settings'. If you continue to use this this site, you consent to our use of cookies",
     "settings.notice.gdpr": "Cookie settings",
-    "accept.notive.gdpr": "Accept"
-
+    "accept.notice.gdpr": "Accept",
+    "title.modal.gdpr": "Cookie settings",
+    "intro.modal.gdpr": "Cookie settings intro",
+    "title.essential.modal.gdpr": "Essential cookies",
+    "text.essential.modal.gdpr": "Essential text",
+    "title.performance.modal.gdpr": "Performance cookies",
+    "text.performance.modal.gdpr": "Performance text",
+    "title.marketing.modal.gdpr": "Marketing cookies",
+    "text.marketing.modal.gdpr": "Marketing text",
+    "close.modal.gdpr": "Close",
+    "active.gdpr": "active",
+    "alwaysactive.gdpr": "always active",
+    "notactive.gdpr": "not active"
 }

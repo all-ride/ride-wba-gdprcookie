@@ -99,6 +99,7 @@
           _setCookie(__cookieCheckerCookieName, '365', true);
           _closeCookieModal();
           _removeCookieWrapper();
+          location.reload();
 
         } else if (_hasClass(element, 'js-cookie-performance')) {
           _updateCheckbox('performance');

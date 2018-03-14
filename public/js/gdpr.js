@@ -2,8 +2,8 @@
 (function (window) {
     'use strict';
 
-
     var CookieMonster = function () {
+
         var cookieWrapper;
         var __cookieCheckerCookieName = '__cookieGdpr';
 
@@ -36,126 +36,125 @@
         };
 
 
-        '<p class="spacer"><strong class="cookie__title">' + rideApp.translator.translate('title.essential.modal.gdpr') + '</strong><br>' +
-        rideApp.translator.translate('text.essential.modal.gdpr') +
-        '<br><label>' + rideApp.translator.translate('alwaysactive.gdpr') + '</label>' +
+        // '<p class="spacer"><strong class="cookie__title">' + rideApp.translator.translate('title.essential.modal.gdpr') + '</strong><br>' +
+        // rideApp.translator.translate('text.essential.modal.gdpr') +
+        // '<br><label>' + rideApp.translator.translate('alwaysactive.gdpr') + '</label>' +
 
-        '</p><p><strong class="cookie__title">' + rideApp.translator.translate('title.performance.modal.gdpr') + '</strong><br>' +
-        rideApp.translator.translate('text.performance.modal.gdpr') +
-        '<br><input class="js-cookie-performance" type="checkbox" name="CookiePerformance" id="performance" checked value="2"><label for="performance" id="performanceLabel" class="js-cookie-performance">' + rideApp.translator.translate('active.gdpr') + '</label>' +
+        // '</p><p><strong class="cookie__title">' + rideApp.translator.translate('title.performance.modal.gdpr') + '</strong><br>' +
+        // rideApp.translator.translate('text.performance.modal.gdpr') +
+        // '<br><input class="js-cookie-performance" type="checkbox" name="CookiePerformance" id="performance" checked value="2"><label for="performance" id="performanceLabel" class="js-cookie-performance">' + rideApp.translator.translate('active.gdpr') + '</label>' +
 
-        '</p><p><strong class="cookie__title">' + rideApp.translator.translate('title.marketing.modal.gdpr') + '</strong><br>' +
-        rideApp.translator.translate('text.marketing.modal.gdpr') +
-        '<br><input class="js-cookie-marketing" type="checkbox" name="CookieMarketing" id="marketing" checked value="3"><label for="marketing" id="marketingLabel" class="js-cookie-marketing">' + rideApp.translator.translate('active.gdpr') + '</label>' +
+        // '</p><p><strong class="cookie__title">' + rideApp.translator.translate('title.marketing.modal.gdpr') + '</strong><br>' +
+        // rideApp.translator.translate('text.marketing.modal.gdpr') +
+        // '<br><input class="js-cookie-marketing" type="checkbox" name="CookieMarketing" id="marketing" checked value="3"><label for="marketing" id="marketingLabel" class="js-cookie-marketing">' + rideApp.translator.translate('active.gdpr') + '</label>' +
 
-        '</p></form>' +
-        '<p class="text--center spacer"><a href="#" class="btn js-modal-close">' + rideApp.translator.translate('close.modal.gdpr') + '</a></p>' +
-        '</div>';
+        // '</p></form>' +
+        // '<p class="text--center spacer"><a href="#" class="btn js-modal-close">' + rideApp.translator.translate('close.modal.gdpr') + '</a></p>' +
+        // '</div>';
 
-        document.body.appendChild(cookieModal);
-      };
+        // document.body.appendChild(cookieModal);
+
 
 
       // check when links get clicked
-      var _listener = function (event) {
-        var element = event.target;
-        if (!element) {
-          return;
-        }
+        var _listener = function (event) {
+            var element = event.target;
+            if (!element) {
+              return;
+            }
 
-        if (_hasClass(element, 'js-cookie-settings')) {
-          event.preventDefault();
-          _renderCookieModal();
+            if (_hasClass(element, 'js-cookie-settings')) {
+              event.preventDefault();
+              _renderCookieModal();
 
-        } else if (_hasClass(element, 'js-cookie-accept')) {
-          event.preventDefault();
-          _setCookie(__cookieCheckerCookieName, '365', true);
-          _removeCookieWrapper();
+            } else if (_hasClass(element, 'js-cookie-accept')) {
+              event.preventDefault();
+              _setCookie(__cookieCheckerCookieName, '365', true);
+              _removeCookieWrapper();
 
-        } else if (_hasClass(element, 'js-modal-close')) {
-          event.preventDefault();
-          _setCookie(__cookieCheckerCookieName, '365', true);
-          _closeCookieModal();
-          _removeCookieWrapper();
-          location.reload();
+            } else if (_hasClass(element, 'js-modal-close')) {
+              event.preventDefault();
+              _setCookie(__cookieCheckerCookieName, '365', true);
+              _closeCookieModal();
+              _removeCookieWrapper();
+              location.reload();
 
-        } else if (_hasClass(element, 'js-cookie-performance')) {
-          _updateCheckbox('performance');
+            } else if (_hasClass(element, 'js-cookie-performance')) {
+              _updateCheckbox('performance');
 
-        } else if (_hasClass(element, 'js-cookie-marketing')) {
-          _updateCheckbox('marketing');
-        }
-      };
-
-
-      var _closeCookieModal = function() {
-
-        if (_isCookieChecked('performance')==true && _isCookieChecked('marketing')==false) {
-          _setCookie('gdpr', '365', 2);
-        }
-
-        if (_isCookieChecked('marketing')==true && _isCookieChecked('performance')==false) {
-          _setCookie('gdpr', '365', 3);
-        }
-
-        var cookieModal = document.getElementById('cookieModal');
-        cookieModal.classList.toggle("superhidden");
-      };
+            } else if (_hasClass(element, 'js-cookie-marketing')) {
+              _updateCheckbox('marketing');
+            }
+        };
 
 
-      var _updateCheckbox = function(label) {
-        var checkboxvar = document.getElementById(label);
-        var labelvar = document.getElementById(label+'Label');
+        var _closeCookieModal = function() {
+            if (_isCookieChecked('performance')==true && _isCookieChecked('marketing')==false) {
+              _setCookie('gdpr', '365', 2);
+            }
 
-        if ((checkboxvar.defaultChecked && !(checkboxvar.checked)) || !(checkboxvar.checked))  {
-          labelvar.innerHTML = rideApp.translator.translate('notactive.gdpr');
-          checkboxvar.checked=false;
-          checkboxvar.defaultChecked=false;
-        }
-        else {
-          labelvar.innerHTML = rideApp.translator.translate('active.gdpr');
-          checkboxvar.checked=true;
-        }
-      };
+            if (_isCookieChecked('marketing')==true && _isCookieChecked('performance')==false) {
+              _setCookie('gdpr', '365', 3);
+            }
 
-      var _isCookieChecked = function(cookie) {
-        var cookieId = document.getElementById(cookie);
-        if ((cookieId.checked)==true || (cookieId.defaultChecked)) {
-          return true;
-        }
-        else {
-          return false;
-        }
+            var cookieModal = document.getElementById('cookieModal');
+            cookieModal.classList.toggle("superhidden");
+        };
 
-      };
 
-      var _removeCookieWrapper = function () {
-        document.body.removeChild(cookieWrapper);
-      };
+        var _updateCheckbox = function(label) {
+            var checkboxvar = document.getElementById(label);
+            var labelvar = document.getElementById(label+'Label');
 
-      var _hasClass = function (element, selector) {
-        return element.className && new RegExp("(\\s|^)" + selector + "(\\s|$)").test(element.className);
-      };
+            if ((checkboxvar.defaultChecked && ! checkboxvar.checked) || !(checkboxvar.checked))  {
+              labelvar.innerHTML = rideApp.translator.translate('notactive.gdpr');
+              checkboxvar.checked=false;
+              checkboxvar.defaultChecked=false;
+            }
+            else {
+              labelvar.innerHTML = rideApp.translator.translate('active.gdpr');
+              checkboxvar.checked=true;
+            }
+        };
 
-      var _getCookie = function (key) {
-        if (!key) {
-          return null;
-        }
-        return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(key).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
-      };
+    
+        var _isCookieChecked = function(cookie) {
+            var cookieId = document.getElementById(cookie);
+            if ((cookieId.checked)==true || (cookieId.defaultChecked)) {
+              return true;
+            }
+            else {
+              return false;
+            }
+        };
 
-      var _setCookie = function (key, expireDays, value) {
-        if (expireDays) {
-          var date = new Date();
-          date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
-          var expires = date.toUTCString();
-        }
-        document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value) + (expires ? '; expires=' + expires : "") + "; path=/";
-      };
+    
+        var _removeCookieWrapper = function () {
+            document.body.removeChild(cookieWrapper);
+        };
 
-      return {
-        init: _init
-      };
+    
+        var _hasClass = function (element, selector) {
+            return element.className && new RegExp("(\\s|^)" + selector + "(\\s|$)").test(element.className);
+        };
+
+    
+        var _getCookie = function (key) {
+            if (!key) {
+              return null;
+            }
+            return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(key).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+        };
+
+    
+        var _setCookie = function (key, expireDays, value) {
+            if (expireDays) {
+                var date = new Date();
+                date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+                var expires = date.toUTCString();
+            }
+            document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value) + (expires ? '; expires=' + expires : "") + "; path=/";
+        };
 
 
         var _renderCookieModal = function () {
@@ -198,111 +197,9 @@
             document.body.appendChild(cookieModal);
         };
 
-
-        // check when links get clicked
-        var _listener = function (event) {
-            var element = event.target;
-            if (!element) {
-                return;
-            }
-
-            if (_hasClass(element, 'js-cookie-settings')) {
-                event.preventDefault();
-                _renderCookieModal();
-
-            } else if (_hasClass(element, 'js-cookie-accept')) {
-                event.preventDefault();
-                _setCookie(__cookieCheckerCookieName, '365', true);
-                _removeCookieWrapper();
-
-            } else if (_hasClass(element, 'js-modal-close')) {
-                event.preventDefault();
-                _setCookie(__cookieCheckerCookieName, '365', true);
-                _closeCookieModal();
-                _removeCookieWrapper();
-
-            } else if (_hasClass(element, 'js-cookie-performance')) {
-                _updateCheckbox('performance');
-
-            } else if (_hasClass(element, 'js-cookie-marketing')) {
-                _updateCheckbox('marketing');
-            }
-        };
-
-
-        var _closeCookieModal = function () {
-
-            if (_isCookieChecked('performance') == false && _isCookieChecked('marketing') == false) {
-                _setCookie('gdpr', '365', 1);
-            }
-          
-            if (_isCookieChecked('performance') == true && _isCookieChecked('marketing') == false) {
-                _setCookie('gdpr', '365', 2);
-            }
-
-            if (_isCookieChecked('marketing') == true && _isCookieChecked('performance') == false) {
-                _setCookie('gdpr', '365', 3);
-            }
-
-            var cookieModal = document.getElementById('cookieModal');
-            cookieModal.classList.toggle("superhidden");
-        };
-
-
-        var _updateCheckbox = function (label) {
-            var checkboxvar = document.getElementById(label);
-            var labelvar = document.getElementById(label + 'Label');
-
-            if ((checkboxvar.defaultChecked && !(checkboxvar.checked)) || !(checkboxvar.checked)) {
-                labelvar.innerHTML = rideApp.translator.translate('notactive.gdpr');
-                checkboxvar.checked = false;
-                checkboxvar.defaultChecked = false;
-            }
-            else {
-                labelvar.innerHTML = rideApp.translator.translate('active.gdpr');
-                checkboxvar.checked = true;
-            }
-        };
-
-        var _isCookieChecked = function (cookie) {
-            var cookieId = document.getElementById(cookie);
-            if ((cookieId.checked) == true || (cookieId.defaultChecked)) {
-                return true;
-            }
-            else {
-                return false;
-            }
-
-        };
-
-        var _removeCookieWrapper = function () {
-            document.body.removeChild(cookieWrapper);
-        };
-
-        var _hasClass = function (element, selector) {
-            return element.className && new RegExp("(\\s|^)" + selector + "(\\s|$)").test(element.className);
-        };
-
-        var _getCookie = function (key) {
-            if (!key) {
-                return null;
-            }
-            return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(key).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
-        };
-
-        var _setCookie = function (key, expireDays, value) {
-            if (expireDays) {
-                var date = new Date();
-                date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
-                var expires = date.toUTCString();
-            }
-            document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value) + (expires ? '; expires=' + expires : "") + "; path=/";
-        };
-
         return {
             init: _init
         };
-
     };
 
     var cookie = new CookieMonster();
@@ -317,3 +214,112 @@
 if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.oMatchesSelector || null;
 }
+
+
+        // // check when links get clicked
+        // var _listener = function (event) {
+        //     var element = event.target;
+        //     if (!element) {
+        //         return;
+        //     }
+
+        //     if (_hasClass(element, 'js-cookie-settings')) {
+        //         event.preventDefault();
+        //         _renderCookieModal();
+
+        //     } else if (_hasClass(element, 'js-cookie-accept')) {
+        //         event.preventDefault();
+        //         _setCookie(__cookieCheckerCookieName, '365', true);
+        //         _removeCookieWrapper();
+
+        //     } else if (_hasClass(element, 'js-modal-close')) {
+        //         event.preventDefault();
+        //         _setCookie(__cookieCheckerCookieName, '365', true);
+        //         _closeCookieModal();
+        //         _removeCookieWrapper();
+
+        //     } else if (_hasClass(element, 'js-cookie-performance')) {
+        //         _updateCheckbox('performance');
+
+        //     } else if (_hasClass(element, 'js-cookie-marketing')) {
+        //         _updateCheckbox('marketing');
+        //     }
+        // };
+
+
+        // var _closeCookieModal = function () {
+
+        //     if (_isCookieChecked('performance') == false && _isCookieChecked('marketing') == false) {
+        //         _setCookie('gdpr', '365', 1);
+        //     }
+          
+        //     if (_isCookieChecked('performance') == true && _isCookieChecked('marketing') == false) {
+        //         _setCookie('gdpr', '365', 2);
+        //     }
+
+        //     if (_isCookieChecked('marketing') == true && _isCookieChecked('performance') == false) {
+        //         _setCookie('gdpr', '365', 3);
+        //     }
+
+        //     var cookieModal = document.getElementById('cookieModal');
+        //     cookieModal.classList.toggle("superhidden");
+        // };
+
+
+        // var _updateCheckbox = function (label) {
+        //     var checkboxvar = document.getElementById(label);
+        //     var labelvar = document.getElementById(label + 'Label');
+
+        //     if ((checkboxvar.defaultChecked && !(checkboxvar.checked)) || !(checkboxvar.checked)) {
+        //         labelvar.innerHTML = rideApp.translator.translate('notactive.gdpr');
+        //         checkboxvar.checked = false;
+        //         checkboxvar.defaultChecked = false;
+        //     }
+        //     else {
+        //         labelvar.innerHTML = rideApp.translator.translate('active.gdpr');
+        //         checkboxvar.checked = true;
+        //     }
+        // };
+
+        // var _isCookieChecked = function (cookie) {
+        //     var cookieId = document.getElementById(cookie);
+        //     if ((cookieId.checked) == true || (cookieId.defaultChecked)) {
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+
+        // };
+
+        // var _removeCookieWrapper = function () {
+        //     document.body.removeChild(cookieWrapper);
+        // };
+
+        // var _hasClass = function (element, selector) {
+        //     return element.className && new RegExp("(\\s|^)" + selector + "(\\s|$)").test(element.className);
+        // };
+
+        // var _getCookie = function (key) {
+        //     if (!key) {
+        //         return null;
+        //     }
+        //     return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(key).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+        // };
+
+        // var _setCookie = function (key, expireDays, value) {
+        //     if (expireDays) {
+        //         var date = new Date();
+        //         date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+        //         var expires = date.toUTCString();
+        //     }
+        //     document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value) + (expires ? '; expires=' + expires : "") + "; path=/";
+        // };
+
+        // return {
+        //     init: _init
+        // };
+
+    // };
+
+

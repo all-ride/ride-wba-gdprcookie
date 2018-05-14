@@ -36,6 +36,10 @@ body.flyout-enabled {
     font-size: .9em;
 }
 
+p.modal__description {
+    margin: 0;
+}
+
 .cookie__wrapper {
     display: flex;
     align-items: center;

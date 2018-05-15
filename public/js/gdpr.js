@@ -2,7 +2,7 @@
 (function (window) {
     'use strict';
 
-    var CookieMonster = function () {
+    var CookieGdpr = function () {
 
         var cookieWrapper;
         var __cookieCheckerCookieName = '__cookieGdpr';
@@ -143,9 +143,7 @@
         };
     };
 
-    var cookie = new CookieMonster();
-    // init and check is already being done in original cookiemonster??
-    // window.onload = cookie.init();
+    var cookie = new CookieGdpr();
 
     if (document.addEventListener) {
         document.addEventListener("DOMContentLoaded", cookie.init, false);

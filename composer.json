@@ -1,0 +1,25 @@
+{
+    "name": "ride/web-gdprcookie",
+    "description": "GDPR cookie warning and modal",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Jan Henckens",
+            "email": "jan@statik.be"
+        },
+        {
+            "name": "Kristof Serré",
+            "email": "kristof@statik.be"
+        },
+        {
+            "name": "Ben Hermans",
+            "email": "ben@statik.be"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "ride\\web\\GdprApplicationListener": ["src/"]
+        }
+    }
+}

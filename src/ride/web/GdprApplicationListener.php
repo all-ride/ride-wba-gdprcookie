@@ -17,14 +17,8 @@ class GdprApplicationListener {
      * Path to the javascript
      * @var string
      */
-    const SCRIPT_COOKIEMONSTER = 'js/gdpr.js';
-
-    /**
-     * Path to the javascript
-     * @var string
-     */
-    const SCRIPT_TRANSLATOR = 'js/translator.js';
-
+    const SCRIPT_COOKIEBANNER = 'js/gdpr.js';
+    
 	/**
 	 * Path to the css
 	 * @var string
@@ -51,8 +45,7 @@ class GdprApplicationListener {
 
         if ($this->shouldAddGdpr($request, $response, $view)) {
         	$view->addStyle($request->getBaseUrl() . '/' . self::STYLES);
-            $view->addJavascript($request->getBaseUrl() . '/' . self::SCRIPT_TRANSLATOR);
-            $view->addJavascript($request->getBaseUrl() . '/' . self::SCRIPT_COOKIEMONSTER);
+            $view->addJavascript($request->getBaseUrl() . '/' . self::SCRIPT_COOKIEBANNER);
         }
     }
 

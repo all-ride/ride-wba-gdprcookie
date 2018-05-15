@@ -1,3 +1,4 @@
+{* widget: template; action: index; name: Cookie banner *}
 <div class="cookiebanner" id="cookiebanner">
     <div class="section section--light section--sml">
         <div class="container">

@@ -3,11 +3,11 @@
         <div class="container">
             <div class="cookie__wrapper">
                 <div class="cookie__body">
-                    {'label.cookiemonster'|translate}
+                    {'label.cookiebanner'|translate}
                 </div>
                 <div class="cookie__cta inline">
                     <a href="#" class="inline__item cookiemonster__settings js-cookie-settings">{'settings.notice.gdpr'|translate}</a>
-                    <a href="#" class="button cookiemonster__accept js-cookie-accept">{'accept.notice.gdpr'|translate}</a>
+                    <a href="#" class="btn cookiemonster__accept js-cookie-accept">{'accept.notice.gdpr'|translate}</a>
                 </div>
             </div>
         </div>

@@ -20,8 +20,6 @@
             document.body.addEventListener('click', _listener);
         };
 
-
-
         // check when links get clicked
         var _listener = function (event) {
             var element = event.target;
@@ -31,6 +29,7 @@
 
             if (_hasClass(element, 'js-cookie-settings')) {
                 event.preventDefault();
+                document.getElementById("cookiebanner").classList.toggle("superhidden");
                 _renderCookieModal();
 
             } else if (_hasClass(element, 'js-cookie-accept')) {
@@ -53,7 +52,6 @@
             }
         };
 
-
         var _closeCookieModal = function() {
             console.log(_isCookieChecked('performance'), _isCookieChecked('marketing'));
             if (_isCookieChecked('performance')==true && _isCookieChecked('marketing')==false) {
@@ -72,7 +70,6 @@
             cookieModal.classList.toggle("superhidden");
         };
 
-
         var _updateCheckbox = function(label) {
             var checkboxvar = document.getElementById(label);
             var labelvar = document.getElementById(label+'Label');
@@ -88,7 +85,6 @@
             }
         };
 
-
         var _isCookieChecked = function(cookie) {
             var cookieId = document.getElementById(cookie);
             if ((cookieId.checked)==true || (cookieId.defaultChecked)) {
@@ -99,9 +95,8 @@
             }
         };
 
-
         var _removeCookieWrapper = function () {
-            var elements = document.getElementsByClassName('gdpr');
+            var elements = document.getElementsByClassName('cookiebanner');
             var count = elements.length;
             for (var i = 0; i < count; i++) {
                 document.body.removeChild(elements[i]);
@@ -112,14 +107,12 @@
             return element.className && new RegExp("(\\s|^)" + selector + "(\\s|$)").test(element.className);
         };
 
-
         var _getCookie = function (key) {
             if (!key) {
                 return null;
             }
             return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(key).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
         };
-
 
         var _setCookie = function (key, expireDays, value) {
             if (expireDays) {
@@ -130,9 +123,7 @@
             document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value) + (expires ? '; expires=' + expires : "") + "; path=/";
         };
 
-
         var _renderCookieModal = function () {
-
             //check if the modal was already opened before
             var cookieModal = document.getElementById('cookieModal');
             cookieModal.style.display = 'block';

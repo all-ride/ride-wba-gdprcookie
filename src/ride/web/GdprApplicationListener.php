@@ -63,20 +63,7 @@ class GdprApplicationListener {
             return true;
         }
 
-        $cookies = $response->getCookies();
-        $cookies += $request->getCookies();
-
-        foreach ($cookies as $name => $cookie) {
-            if (strpos($name, '__') === 0) {
-                unset($cookies[$name]);
-            }
-        }
-
-        if ($cookies) {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 
 }

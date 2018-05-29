@@ -2,7 +2,6 @@
     "name": "ride/wba-gdprcookie",
     "description": "GDPR cookie warning and modal",
     "license": "MIT",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "Jan Henckens",

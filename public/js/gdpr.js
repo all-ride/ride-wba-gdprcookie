@@ -16,7 +16,6 @@
 
         var _init = function () {
             var shouldRun = _getCookie(__cookieCheckerCookieName) ? false : true;
-            console.log(shouldRun);
             if (shouldRun) {
                 document.body.appendChild(document.getElementById("cookiebanner"))
                 document.getElementById("cookiebanner").style.display = 'block';

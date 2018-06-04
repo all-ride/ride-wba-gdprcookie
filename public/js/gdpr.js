@@ -6,10 +6,16 @@
 
         var cookieWrapper;
         var __cookieCheckerCookieName = '__cookieGdpr';
+        var locale = document.documentElement.lang;
+        var translations = {
+            nl: { active: "actief", nonactive: "niet actief"},
+            fr: { active: "Actifs", nonactive: "Pas actif"},
+            en: { active: "Active", nonactive: "Not active"}
+        };
+
 
         var _init = function () {
             var shouldRun = _getCookie(__cookieCheckerCookieName) ? false : true;
-            console.log(shouldRun);
             if (shouldRun) {
                 document.body.appendChild(document.getElementById("cookiebanner"))
                 document.getElementById("cookiebanner").style.display = 'block';
@@ -75,12 +81,20 @@
             var labelvar = document.getElementById(label+'Label');
 
             if ((checkboxvar.defaultChecked && ! checkboxvar.checked) || !(checkboxvar.checked))  {
-                labelvar.innerHTML = ' niet actief';
+                if (typeof translations[locale] !== 'undefined') {
+                    labelvar.innerHTML = ' '+ translations[locale].nonactive;
+                } else {
+                    labelvar.innerHTML = ' niet actief';
+                }
                 checkboxvar.checked=false;
                 checkboxvar.defaultChecked=false;
             }
             else {
-                labelvar.innerHTML = ' actief';
+                if (typeof translations[locale] !== 'undefined') {
+                    labelvar.innerHTML = ' '+ translations[locale].active;
+                } else {
+                    labelvar.innerHTML = ' actief';
+                }
                 checkboxvar.checked=true;
             }
         };

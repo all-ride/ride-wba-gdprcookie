@@ -1,4 +1,10 @@
 # Changelog 
+
+## [1.0.4] - 2018-06-07
+### Updated
+- Better translations for active/non-active checkboxes
+
+
 ## [1.0.3] - 2018-06-04
 ### Added
 - Added language support for the checkboxes

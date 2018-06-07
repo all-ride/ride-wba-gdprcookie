@@ -9,8 +9,8 @@
         var locale = document.documentElement.lang;
         var translations = {
             nl: { active: "actief", nonactive: "niet actief"},
-            fr: { active: "Actifs", nonactive: "Pas actif"},
-            en: { active: "Active", nonactive: "Not active"}
+            fr: { active: "actif", nonactive: "non actif"},
+            en: { active: "active", nonactive: "non-active"}
         };
 
 

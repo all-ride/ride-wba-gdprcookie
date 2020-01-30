@@ -1,66 +1,68 @@
-body.flyout-enabled {
-    transform: none;
-}
-
 .cookiebanner {
     position: fixed;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
+    max-width: 500px;
     display: none;
     z-index: 99999999;
+    box-shadow: 0px 0px 11px 0px rgba(black, 0.15);
+    padding: 5px;
+    background-color: white;
+}
 
+.cookiebanner-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999999;
 }
 
 .cookie-modal {
     position: fixed;
     z-index: 99999999;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 50%;
     width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    max-width: 500px;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
     display: none;
+    overflow: auto; /* Enable scroll if needed */
 }
 
 .cookie-modal__content {
     background-color: #fefefe;
-    margin: auto;
-    margin-top: 10vh;
-    padding: 2%;
+    padding: 20px;
     border: 1px solid #888;
-    width: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    font-size: .9em;
-}
-
-p.modal__description {
-    margin: 0;
+    max-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    font-size: 0.9em;
 }
 
 .cookie__wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: initial;
 }
 
 .cookie__title {
-    padding-bottom: 5px;
+@include fsRem(25px);
 }
 
 .cookie__body {
-    width: 70%;
-    float: left;
+@include fsRem(15px);
 }
 
 .cookie__cta {
-    margin-left: auto;
+@include fsRem(15px);
+    margin-top: 20px;
 }
 
-.cookie__cta a {
-    /*margin: 10px;*/
+.cookie__cta a:first-child {
+    margin-left: 0;
 }
 
 .cookie__section + .cookie__section {
@@ -68,42 +70,7 @@ p.modal__description {
 }
 
 .section--shadow {
-    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 800px) {
-    .cookie-modal__content {
-        width: 80%;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .cookie-modal__content {
-        margin: auto;
-        margin-top: 5%;
-        padding: 2%;
-        border: 1px solid #888;
-        width: 85%;
-
-    }
-    .cookie__wrapper {
-        flex-direction: column;
-    }
-
-    .cookie__wrapper > div {
-        width: 100%;
-    }
-
-    .cookie__cta {
-        text-align: center;
-        margin-top: 15px;
-        margin-left: 0;
-    }
-
-    h2 {
-        /*font-size: 1.2em;*/
-    }
-
-    .btn {
-    }
-}

@@ -1,9 +1,9 @@
 {
-    "label.cookiebanner": "Wij gebruiken cookies om u de best mogelijke ervaring te geven op deze website.",
-    "body.notice.gdpr": "We gebruiken cookies om je een betere surf-ervaring aan te bieden. Lees hoe we cookies gebruiken en hoe je kan bepalen wat op jouw bezoek van toepassing is door te klikken op 'Cookie instellingen'",
-    "settings.notice.gdpr": "Cookie instellingen",
+    "label.cookiebanner": "We gebruiken cookies om je een betere bezoekerservaring te bieden. Ga naar je instellingen om je voorkeuren aan te passen of klik op akkoord om verder te gaan naar de website.",
+    "body.notice.gdpr": "Onze website houdt drie niveaus van cookies bij. Je kan zelf je voorkeuren op elk moment aanpassen. Meer informatie over wat cookies zijn en welke cookies we verzamelen kan je lezen in ons <a href=\"%policy_node%\">cookiebeleid</a>.",
+    "settings.notice.gdpr": "Cookieinstellingen",
     "accept.notice.gdpr": "Akkoord",
-    "title.modal.gdpr": "Cookie instellingen",
+    "title.modal.gdpr": "Cookieinstellingen",
     "title.essential.modal.gdpr": "Essentiële cookies",
     "text.essential.modal.gdpr": "Functionele cookies zijn noodzakelijke cookies die ervoor zorgen dat de website goed functioneert en dat je voorkeuren (bv. taal, regio) goed worden opgeslagen.",
     "title.performance.modal.gdpr": "Analytische cookies",
@@ -13,5 +13,6 @@
     "close.modal.gdpr": "Sluiten",
     "active.gdpr": "actief",
     "alwaysactive.gdpr": "altijd actief",
-    "notactive.gdpr": "niet actief"
+    "notactive.gdpr": "niet actief",
+    "title.gdpr": "Deze website gebruikt cookies"
 }

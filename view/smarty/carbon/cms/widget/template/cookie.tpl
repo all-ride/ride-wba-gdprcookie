@@ -3,22 +3,25 @@
     <div class="section section--light section--sml">
         <div class="container">
             <div class="cookie__wrapper">
+                <h2 class="cookie__title">{'title.gdpr'|translate}</h2>
                 <div class="cookie__body">
-                    {'label.cookiebanner'|translate}
+                    {translate key="label.cookiebanner"}
                 </div>
-                <div class="cookie__cta inline">
+                <div class="cookie__cta">
+                    <a href="#" class="btn btn--brand cookiemonster__accept js-cookie-accept">{'accept.notice.gdpr'|translate}</a>
                     <a href="#" class="inline__item cookiemonster__settings js-cookie-settings">{'settings.notice.gdpr'|translate}</a>
-                    <a href="#" class="btn cookiemonster__accept js-cookie-accept">{'accept.notice.gdpr'|translate}</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="cookiebanner-overlay" id="cookiebanner-overlay"></div>
+
 <div class="cookie-modal" id="cookieModal">
     <div class="cookie-modal__content">
         <h2 class="text--center">{'settings.notice.gdpr'|translate}</h2>
         <p class="modal__description">
-            {'body.notice.gdpr'|translate}
+            {translate key='body.notice.gdpr'}
         </p>
         <br>
         <form>

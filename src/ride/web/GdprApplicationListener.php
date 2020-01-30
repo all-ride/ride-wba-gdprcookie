@@ -18,18 +18,27 @@ class GdprApplicationListener {
      * @var string
      */
     const SCRIPT_COOKIEBANNER = 'js/gdpr.js';
-    
-	/**
-	 * Path to the css
-	 * @var string
-	 */
-	const STYLES = 'css/gdpr.css';
 
     /**
-     * Flag to see if the GDPR listener should be added no matter what
-     * @var boolean
+     * Path to the css
+     * @var string
      */
-    private $isForced;
+    const STYLES = 'css/gdpr.css';
+
+    /**
+     * Id of the node where cookie policy is written down
+     * @var string
+     */
+    private $policy_node;
+
+    /**
+     * Constructs the cookie monster
+     * @param string $policy_node
+     * @return null
+     */
+    public function __construct($policy_node = null) {
+        $this->policy_node = $policy_node;
+    }
 
     /**
      * Event listener to add the GDPR modal to the response if applicable
@@ -44,9 +53,11 @@ class GdprApplicationListener {
         $view = $response->getView();
 
         if ($this->shouldAddGdpr($request, $response, $view)) {
-        	$view->addStyle($request->getBaseUrl() . '/' . self::STYLES);
-            $view->addJavascript($request->getBaseUrl() . '/' . self::SCRIPT_COOKIEBANNER);
+            $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
+            $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
+            $view->getTemplate()->set('policy_node', $this->policy_node);
         }
+
     }
 
     /**
@@ -59,11 +70,8 @@ class GdprApplicationListener {
     private function shouldAddGdpr(Request $request, Response $response, View $view = null) {
         if (!$view || !$view instanceof HtmlView) {
             return false;
-        } elseif ($this->isForced) {
-            return true;
         }
 
         return true;
     }
-
 }

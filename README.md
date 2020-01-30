@@ -5,7 +5,7 @@
 You can use [Composer](http://getcomposer.org) to install this application.
 
 ```
-composer require ride/web-gdprcookie
+composer require ride/wba-gdprcookie
 ```
 
 ## Usage

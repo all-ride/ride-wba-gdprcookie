@@ -1,0 +1,22 @@
+
+{
+    "dependencies": [
+        {
+            "class": "ride\\web\\GdprApplicationListener",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "policy_node",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "gdpr.policy_node"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

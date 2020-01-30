@@ -1,6 +1,6 @@
 {
     "label.cookiebanner": "We gebruiken cookies om je een betere bezoekerservaring te bieden. Ga naar je instellingen om je voorkeuren aan te passen of klik op akkoord om verder te gaan naar de website.",
-    "body.notice.gdpr": "Onze website houdt drie niveaus van cookies bij. Je kan zelf je voorkeuren op elk moment aanpassen. Meer informatie over wat cookies zijn en welke cookies we verzamelen kan je lezen in ons <a href=\"%policy_node%\">cookiebeleid</a>.",
+    "body.notice.gdpr": "Onze website houdt drie niveaus van cookies bij. Je kan zelf je voorkeuren op elk moment aanpassen. Meer informatie over wat cookies zijn en welke cookies we verzamelen kan je lezen in ons <a href=\"%policy%\">cookiebeleid</a>.",
     "settings.notice.gdpr": "Cookieinstellingen",
     "accept.notice.gdpr": "Akkoord",
     "title.modal.gdpr": "Cookieinstellingen",

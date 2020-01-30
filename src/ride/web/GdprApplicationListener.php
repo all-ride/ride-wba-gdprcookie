@@ -7,6 +7,7 @@ use ride\library\http\Request;
 use ride\library\mvc\Response;
 use ride\library\mvc\view\HtmlView;
 use ride\library\mvc\view\View;
+use ride\web\base\service\TemplateService;
 
 /**
  * Listener to hook the GDPR listener into Ride
@@ -26,18 +27,24 @@ class GdprApplicationListener {
     const STYLES = 'css/gdpr.css';
 
     /**
-     * Id of the node where cookie policy is written down
+     * Id of the url where cookie policy is written down
      * @var string
      */
-    private $policy_node;
+    private $policyUrl;
+
+    /**
+     * @var \ride\web\base\service\TemplateService
+     */
+    private $templateService;
 
     /**
      * Constructs the cookie monster
-     * @param string $policy_node
+     * @param string $policyUrl
      * @return null
      */
-    public function __construct($policy_node = null) {
-        $this->policy_node = $policy_node;
+    public function __construct(TemplateService $templateService, $policyUrl = null) {
+        $this->policyUrl = $policyUrl;
+        $this->templateService = $templateService;
     }
 
     /**
@@ -55,7 +62,10 @@ class GdprApplicationListener {
         if ($this->shouldAddGdpr($request, $response, $view)) {
             $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
             $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
-            $view->getTemplate()->set('policy_node', $this->policy_node);
+
+            $template = $this->templateService->createTemplate('base/cookie/default', ['policyUrl' => $this->policyUrl]);
+            $gdprTemplate = $this->templateService->render($template);
+            $view->getTemplate()->set('gdprTemplate',$gdprTemplate);
         }
 
     }
@@ -74,4 +84,6 @@ class GdprApplicationListener {
 
         return true;
     }
+
+
 }

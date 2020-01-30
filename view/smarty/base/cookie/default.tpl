@@ -21,7 +21,7 @@
     <div class="cookie-modal__content">
         <h2 class="text--center">{'settings.notice.gdpr'|translate}</h2>
         <p class="modal__description">
-            {translate key='body.notice.gdpr'}
+            {translate key="body.notice.gdpr" policy=$policyUrl}
         </p>
         <br>
         <form>
@@ -52,7 +52,7 @@
             </div>
         </form>
         <p class="text--center spacer">
-            <a href="#" class="btn js-modal-close">{'close.modal.gdpr'|translate}</a>
+            <a href="#" class="btn btn--default js-modal-close">{'close.modal.gdpr'|translate}</a>
         </p>
     </div>
 </div>

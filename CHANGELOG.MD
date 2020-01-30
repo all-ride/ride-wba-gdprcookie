@@ -1,4 +1,7 @@
 # Changelog 
+
+## [2.0.1] - 2020-01-30
+- Fixed dependencies parameter
 ## [2.0.0] - 2020-01-30
 - Changed js and css for cookieconsent
 - Removed the use of template widget to render the template

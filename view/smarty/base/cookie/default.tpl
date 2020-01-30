@@ -21,7 +21,7 @@
     <div class="cookie-modal__content">
         <h2 class="text--center">{'settings.notice.gdpr'|translate}</h2>
         <p class="modal__description">
-            {translate key="body.notice.gdpr" policy=$policyUrl}
+            {translate key="body.notice.gdpr" policyUrl=$policyUrl}
         </p>
         <br>
         <form>

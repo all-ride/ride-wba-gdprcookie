@@ -40,7 +40,7 @@
                     {'text.performance.modal.gdpr'|translate}<br>
                 </p>
                 <input class="js-cookie-performance" type="checkbox" name="CookiePerformance" id="performance" value="2">
-                <label for="performance" id="performanceLabel" class="js-cookie-performance"> {'active.gdpr'|translate}</label>
+                <label for="performance" id="performanceLabel" class="js-cookie-performance"> {'notactive.gdpr'|translate}</label>
             </div>
             <div class="cookie__section">
                 <strong class="cookie__title">{'title.marketing.modal.gdpr'|translate}</strong><br>
@@ -48,7 +48,7 @@
                     {'text.marketing.modal.gdpr'|translate}<br>
                 </p>
                 <input class="js-cookie-marketing" type="checkbox" name="CookieMarketing" id="marketing" value="3">
-                <label for="marketing" id="marketingLabel" class="js-cookie-marketing"> {'active.gdpr'|translate}</label>
+                <label for="marketing" id="marketingLabel" class="js-cookie-marketing"> {'notactive.gdpr'|translate}</label>
             </div>
         </form>
         <p class="text--center spacer">

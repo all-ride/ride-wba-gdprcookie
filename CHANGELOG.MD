@@ -1,5 +1,8 @@
 # Changelog 
 
+## [2.0.2] - 2020-01-30
+- Updated the readme
+
 ## [2.0.1] - 2020-01-30
 - Fixed dependencies parameter
 ## [2.0.0] - 2020-01-30

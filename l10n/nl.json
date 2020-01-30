@@ -10,9 +10,9 @@
     "text.performance.modal.gdpr": "Analytische cookies laten ons toe om het gebruik van de website te analyseren en de bezoekerservaring te verbeteren.",
     "title.marketing.modal.gdpr": "Marketing cookies",
     "text.marketing.modal.gdpr": "Marketingcookies hebben als doel om je ervaring te kunnen personaliseren en je relevante inhoud en aanbiedingen te sturen op deze en andere websites.",
-    "close.modal.gdpr": "Sluiten",
-    "active.gdpr": "actief",
-    "alwaysactive.gdpr": "altijd actief",
-    "notactive.gdpr": "niet actief",
+    "close.modal.gdpr": "Opslaan",
+    "active.gdpr": "Actief",
+    "alwaysactive.gdpr": "Altijd actief",
+    "notactive.gdpr": "Niet actief",
     "title.gdpr": "Deze website gebruikt cookies"
 }

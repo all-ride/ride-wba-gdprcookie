@@ -1,6 +1,8 @@
 # Changelog 
-## [1.1.0] - 2020-01-30
+## [2.0.0] - 2020-01-30
 - Changed js and css for cookieconsent
+- Removed the use of template widget to render the template
+- Added multi language support for policy url
 
 ## [1.0.4] - 2018-06-07
 ### Updated

@@ -10,10 +10,6 @@
         {
             "name": "Kristof Serré",
             "email": "kristof@statik.be"
-        },
-        {
-            "name": "Ben Hermans",
-            "email": "ben@statik.be"
         }
     ],
     "autoload": {

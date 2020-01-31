@@ -1,10 +1,14 @@
 # Changelog 
 
+## [2.0.3] - 2020-01-31
+- Added template to recall modal in frontend after settings have been set
+
 ## [2.0.2] - 2020-01-30
 - Updated the readme
 
 ## [2.0.1] - 2020-01-30
 - Fixed dependencies parameter
+
 ## [2.0.0] - 2020-01-30
 - Changed js and css for cookieconsent
 - Removed the use of template widget to render the template

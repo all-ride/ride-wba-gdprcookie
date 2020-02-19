@@ -90,9 +90,10 @@ class GdprApplicationListener {
     }
 
     private function getLocale(Request $request) {
-
-        if (is_array($this->policyUrl)) {
+        if (is_array($this->policyUrl) && $request->getRoute()->getLocale()) {
             $this->policyUrl = $this->policyUrl[$request->getRoute()->getLocale()];
+        } else {
+            $this->policyUrl = array_shift($this->policyUrl);
         }
     }
 }

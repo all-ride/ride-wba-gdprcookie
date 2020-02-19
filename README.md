@@ -31,7 +31,7 @@ You need to include the following snippet in your `base/index.tpl`.  Preferred r
 
 ```smarty
 <!-- Adds the cookie template to your page -->
-{if isset($gdprTemplate) && (isset($policyUrl) && $policyUrl !== $app.request.url)}
+{if isset($gdprTemplate)}
     {$gdprTemplate}
 {/if}
 <!-- End of cookie template snippet -->

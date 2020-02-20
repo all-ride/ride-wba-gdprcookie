@@ -1,8 +1,10 @@
 # Changelog 
 
+## [2.0.5] - 2020-02-20
+- Updated translations
+
 ## [2.0.4] - 2020-02-19
 - Updated Readme bug + template snippet + policy Url check
-
 
 ## [2.0.3] - 2020-01-31
 - Added template to recall modal in frontend after settings have been set

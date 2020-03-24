@@ -1,5 +1,8 @@
 # Changelog 
 
+## [2.0.6] - 2020-03-24
+- Fixed check for policyUrl
+
 ## [2.0.5] - 2020-02-20
 - Updated translations
 

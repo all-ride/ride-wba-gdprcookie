@@ -1,5 +1,10 @@
 # Changelog 
 
+## [2.1.0] - 2020-07-14
+- Updated the modal template + styling and js file
+- Added more changeable settings for cookie
+- Changed translations format
+
 ## [2.0.6] - 2020-03-24
 - Fixed check for policyUrl
 

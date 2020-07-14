@@ -3,4 +3,3 @@
         <a href="#" class="js-cookie-settings">{'settings.notice.gdpr'|translate}</a>
     </div>
 </div>
-

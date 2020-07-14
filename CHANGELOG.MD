@@ -1,5 +1,8 @@
 # Changelog 
 
+## [2.1.1] - 2020-07-14
+- Updated styling and js file names
+
 ## [2.1.0] - 2020-07-14
 - Updated the modal template + styling and js file
 - Added more changeable settings for cookie

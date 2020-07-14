@@ -12,7 +12,8 @@ composer require ride/wba-gdprcookie
 
 The module includes a script & styling for a cookie banner and a modal where the visitor can select his/her cookie preferences.
 
-You need to include the following snippet in your `base/index.tpl`.  Preferred right before the `</body>` closing tag.
+You need to include the following snippet in your `base/index.tpl`. 
+Right underneath the `content_body` block
 
 ```smarty
 <!-- Adds the cookie template to your page -->

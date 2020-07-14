@@ -18,14 +18,14 @@ class GdprApplicationListener {
      *
      * @var string
      */
-    const SCRIPT_COOKIEBANNER = 'js/gdpr.js';
+    const SCRIPT_COOKIEBANNER = 'js/cookie-consent.js';
 
     /**
      * Path to the css
      *
      * @var string
      */
-    const STYLES = 'css/gdpr.css';
+    const STYLES = 'css/cookie-consent.css';
 
     /**
      * Id of the url where cookie policy is written down
@@ -65,7 +65,7 @@ class GdprApplicationListener {
         $this->getLocale($request);
 
         if ($this->shouldAddGdpr($request, $response, $view) && $request->getUrl(true) !== $this->policyUrl) {
-            $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
+            //$view->addStyle($request->getBaseUrl().'/'.self::STYLES);
             $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
             $template = $this->templateService->createTemplate('base/cookie/default', ['policyUrl' => $this->policyUrl]);
             $gdprTemplate = $this->templateService->render($template);

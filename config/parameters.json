@@ -1,6 +1,14 @@
 {
-  "gdpr.policyUrl": null,
-  "gdpr.policyUrl.nl": null,
-  "gdpr.policyUrl.en": null,
-  "gdpr.policyUrl.fr": null
+  "cookies.cookie_key": "__cookie_consent",
+  "cookies.cookie_value_analytics": "2",
+  "cookies.cookie_value_marketing": "3",
+  "cookies.cookie_value_both": "true",
+  "cookies.cookie_value_none": "false",
+  "cookies.cookie_expiration_days": "365",
+  "cookies.gtm_event": "pageview",
+  "cookies.ignored_paths.0": "",
+  "cookies.ignored_paths.1": "",
+  "cookies.policy_url_en": "",
+  "cookies.policy_url_fr": "",
+  "cookies.policy_url_nl": ""
 }

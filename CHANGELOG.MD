@@ -1,5 +1,7 @@
 # Changelog 
 
+## [2.1.2] - 2020-07-14
+- Updated dependencies for policyUrl
 ## [2.1.1] - 2020-07-14
 - Updated styling and js file names
 

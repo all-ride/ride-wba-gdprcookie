@@ -11,7 +11,7 @@
                             "name": "policyUrl",
                             "type": "parameter",
                             "properties": {
-                                "key": "gdpr.policyUrl"
+                                "key": "cookies.policy_url"
                             }
                         }
                     ]

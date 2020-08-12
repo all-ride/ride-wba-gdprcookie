@@ -1,5 +1,7 @@
 # Changelog 
 
+## [2.1.5] - 2020-08-12
+- Updated, Changed js to compiled version
 ## [2.1.4] - 2020-08-12
 - Updated Javascript changed for opening/altering modal
 ## [2.1.3] - 2020-07-14

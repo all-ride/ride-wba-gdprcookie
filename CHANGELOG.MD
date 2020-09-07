@@ -1,5 +1,8 @@
 # Changelog 
 
+## [2.1.6] - 2020-09-07
+- Updated cookie settings to work on cookie refresh
+- Added cookie settings snippet in readme
 ## [2.1.5] - 2020-08-12
 - Updated, Changed js to compiled version
 ## [2.1.4] - 2020-08-12

@@ -23,6 +23,11 @@ Right underneath the `content_body` block
 <!-- End of cookie template snippet -->
 ```
 
+Add the link to the settings on your page.
+```
+<a href="javascript:void(0)" class="js-lcc-settings-toggle">cookie settings</a>
+```
+
 In your `parameters.json` you set the url to your cookie policy page.
 This has to be done per language.
 eg.

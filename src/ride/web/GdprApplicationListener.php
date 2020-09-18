@@ -64,7 +64,7 @@ class GdprApplicationListener {
         $view = $response->getView();
         $this->getLocale($request);
 
-        if ($this->shouldAddGdpr($request, $response, $view) && $request->getUrl(true) !== $this->policyUrl) {
+        if ($this->shouldAddGdpr($request, $response, $view)) {
             $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
             $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
             $template = $this->templateService->createTemplate('base/cookie/default', ['policyUrl' => $this->policyUrl]);

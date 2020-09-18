@@ -32,15 +32,25 @@ In your `parameters.json` you set the url to your cookie policy page.
 This has to be done per language.
 eg.
 
-`gdpr.policyUrl.nl` => 'https://your.policy.url'
+`cookies.policy_url.nl => 'https://your.policy.url'
 
-`gdpr.policyUrl.en` => 'https://your.policy.url'
+`cookies.policy_url.en` => 'https://your.policy.url'
 
-`gdpr.policyUrl.fr` => 'https://your.policy.url'
+`cookies.policy_url.fr` => 'https://your.policy.url'
 
 If there is only one language present you can just set
 
-`gdpr.policyUrl` => 'https://your.policy.url'
+`cookies.policy_url` => 'https://your.policy.url'
+
+### Don't forget to add your cookie policy page to the ignored paths
+You don't want the modal to pop up on your policy page.
+So in your `parameters.json` add:
+`"cookies.ignored_paths": "/en/cookie-policy"`
+
+Always use the __relative url__.
+
+If you want to add more ignored paths for let's say multisites,
+use the ignored paths as in the example below.
 
 Cookie settings can be altered in parameters too:
 ```

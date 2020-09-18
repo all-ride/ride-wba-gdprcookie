@@ -6,6 +6,7 @@
      data-cookie-value-marketing="{$cookies['cookie_value_marketing']}"
      data-cookie-value-both="{$cookies['cookie_value_both']}"
      data-cookie-value-none="{$cookies['cookie_value_none']}"
+     data-gtm-event="{$cookies['gtm_event'] }"
      data-cookie-expiration-days="{$cookies['cookie_expiration_days']}"
      data-ignored-paths="{$cookies['ignored_paths']|implode:','}"
 >

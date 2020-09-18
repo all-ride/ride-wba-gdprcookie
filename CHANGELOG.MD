@@ -1,5 +1,6 @@
 # Changelog 
-
+## [2.1.8] - 2020-09-18
+- Updated data properties added gtm event
 ## [2.1.7] - 2020-09-18
 - Updated the check for ignored path in ApplicationListener
 - Added ignored paths info in readme

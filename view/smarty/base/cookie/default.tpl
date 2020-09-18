@@ -41,7 +41,7 @@
             </h2>
             <p id="lcc-modal-settings-desc" class="lcc-text">
                 {$locale = $app.locale}
-                {translate key="cookies.settings_text" policyUrl=$cookies["policy_url"][$locale] }
+                {translate key="cookies.settings_text" policyUrl=$policyUrl }
             </p>
             <div class="lcc-modal__section lcc-u-text-center">
                 <button type="button" class="lcc-button js-lcc-accept">

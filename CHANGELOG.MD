@@ -1,5 +1,8 @@
 # Changelog 
 
+## [2.1.7] - 2020-09-18
+- Updated the check for ignored path in ApplicationListener
+- Added ignored paths info in readme
 ## [2.1.6] - 2020-09-07
 - Updated cookie settings to work on cookie refresh
 - Added cookie settings snippet in readme

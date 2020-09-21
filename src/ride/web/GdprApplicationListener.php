@@ -35,6 +35,12 @@ class GdprApplicationListener {
     private $policyUrl;
 
     /**
+     * Boolean to set if you use custom styling of the default styling
+     * @var boolean
+     */
+    private $customStyle;
+
+    /**
      * @var \ride\web\base\service\TemplateService
      */
     private $templateService;
@@ -42,12 +48,14 @@ class GdprApplicationListener {
     /**
      * Constructs the cookie monster
      *
+     * @param TemplateService $templateService
      * @param string $policyUrl
-     * @return null
+     * @param bool $customStyle
      */
-    public function __construct(TemplateService $templateService, $policyUrl = null) {
+    public function __construct(TemplateService $templateService, $policyUrl = null, $customStyle = false) {
         $this->policyUrl = $policyUrl;
         $this->templateService = $templateService;
+        $this->customStyle = $customStyle;
     }
 
     /**
@@ -64,13 +72,18 @@ class GdprApplicationListener {
         $view = $response->getView();
         $this->getLocale($request);
 
-        if ($this->shouldAddGdpr($request, $response, $view)) {
-            $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
+        if ($this->shouldAddGdpr($view)) {
+
+            if (!$this->customStyle) {
+                $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
+            }
             $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
             $template = $this->templateService->createTemplate('base/cookie/default', ['policyUrl' => $this->policyUrl]);
             $gdprTemplate = $this->templateService->render($template);
             $view->getTemplate()->set('gdprTemplate', $gdprTemplate);
         }
+
+        return null;
     }
 
     /**
@@ -81,12 +94,8 @@ class GdprApplicationListener {
      * @param \ride\library\mvc\view\View $view
      * @return boolean
      */
-    private function shouldAddGdpr(Request $request, Response $response, View $view = null) {
-        if (!$view || !$view instanceof HtmlView) {
-            return false;
-        }
-
-        return true;
+    private function shouldAddGdpr(View $view = null) {
+        return !(!$view || !$view instanceof HtmlView);
     }
 
     private function getLocale(Request $request) {

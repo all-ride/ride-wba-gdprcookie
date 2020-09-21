@@ -1,4 +1,7 @@
 # Changelog 
+
+## [2.1.9]
+- Added custom style check so it uses the css from your compiled main.scss
 ## [2.1.8] - 2020-09-18
 - Updated data properties added gtm event
 ## [2.1.7] - 2020-09-18

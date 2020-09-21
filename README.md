@@ -60,9 +60,10 @@ Cookie settings can be altered in parameters too:
   "cookies.cookie_value_both": "true",
   "cookies.cookie_value_none": "false",
   "cookies.cookie_expiration_days": "365",
-  "cookies.gtm_event": "pageview",
+  "cookies.gtm_event": "cookie_refresh",
   "cookies.ignored_paths.0": "",
   "cookies.ignored_paths.1": "",
+  "cookies.custom_style": false
 ```
 
  

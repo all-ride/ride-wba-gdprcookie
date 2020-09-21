@@ -10,5 +10,6 @@
   "cookies.ignored_paths.1": "",
   "cookies.policy_url.en": "",
   "cookies.policy_url.fr": "",
-  "cookies.policy_url.nl": ""
+  "cookies.policy_url.nl": "",
+  "cookies.custom_style": false
 }

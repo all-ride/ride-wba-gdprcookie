@@ -1,4 +1,4 @@
-q# Ride: GDRP Cookie notice & modal
+# Ride: GDRP Cookie notice & modal
 
 ## Installation
 

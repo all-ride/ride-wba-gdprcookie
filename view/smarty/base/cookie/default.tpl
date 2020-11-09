@@ -8,7 +8,7 @@
      data-cookie-value-none="{$cookies['cookie_value_none']}"
      data-gtm-event="{$cookies['gtm_event'] }"
      data-cookie-expiration-days="{$cookies['cookie_expiration_days']}"
-     data-ignored-paths="{$cookies['ignored_paths']|implode:','}"
+     data-ignored-paths="{','|implode:$cookies['ignored_paths']}"
 >
     <div class="lcc-modal__content">
         <h2 id="lcc-modal-alert-label" class="lcc-modal__title">

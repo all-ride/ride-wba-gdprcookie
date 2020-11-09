@@ -1,5 +1,7 @@
 # Changelog 
 
+## [2.2.0] - 2020-11-09
+- Changed implode function to work with php 7.4
 ## [2.1.9]
 - Added custom style check so it uses the css from your compiled main.scss
 ## [2.1.8] - 2020-09-18

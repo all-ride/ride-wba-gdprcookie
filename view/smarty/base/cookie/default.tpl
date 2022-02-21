@@ -82,9 +82,6 @@
         </div>
     </div>
     <div class="lcc-modal__actions">
-        <a href="#" class="lcc-button lcc-button--link js-lcc-settings-toggle">
-            {translate key="cookies.settings_cancel"}
-        </a>
         <button type="button" class="lcc-button js-lcc-settings-save">
             {translate key="cookies.settings_save"}
         </button>

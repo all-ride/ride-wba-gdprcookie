@@ -2,7 +2,7 @@
     "cookies.alert_accept" : "Akkoord",
     "cookies.alert_essentials_only": "Enkel essentiële cookies aanvaarden",
     "cookies.alert_settings" : "Je voorkeuren aanpassen",
-    "cookies.alert_text" : "We gebruiken cookies om je een betere bezoekerservaring te bieden. Klik op akkoord om alle cookies te accepteren of ga naar cookieinstellingen om je voorkeuren te beheren.",
+    "cookies.alert_text" : "Door op 'Alle cookies aanvaarden' te klikken ga je akkoord met het opslaan van onze cookies op je computer. Zo kunnen we een betere gebruikservaring bieden, en het laat ons toe om het gebruik van de website te analyseren. Door op 'Je voorkeuren aanpassen' te klikken kan je kiezen welke cookies je toelaat. Enkel de essentiële cookies zijn noodzakelijk voor de goede werking van de website en kan je niet weigeren.",
     "cookies.alert_title" : "Deze website gebruikt cookies",
     "cookies.setting_analytics" : "Analytische cookies",
     "cookies.setting_analytics_text" : "laten ons toe om het gebruik van de website te analyseren en de bezoekerservaring te verbeteren.",
@@ -12,7 +12,7 @@
     "cookies.setting_marketing_text" : "hebben als doel je ervaring te personaliseren en je relevante inhoud en aanbiedingen te sturen op deze en andere websites.",
     "cookies.settings_cancel" : "Annuleren",
     "cookies.settings_close" : "Sluiten",
-    "cookies.settings_save" : "Opslaan",
+    "cookies.settings_save" : "Mijn keuze bewaren",
     "cookies.settings_title" : "Cookieinstellingen",
     "cookies.settings_text" : "Onze website houdt drie niveaus van cookies bij. Je kan zelf je voorkeuren op elk moment aanpassen. Meer informatie over wat cookies zijn en welke cookies we verzamelen kan je lezen in ons <a href=\"%policyUrl%\">cookiebeleid</a>.",
     "cookies.settings_accept_all": "Alle cookies aanvaarden"

@@ -2,7 +2,7 @@
   "cookies.alert_accept" : "Accepter",
   "cookies.alert_essentials_only": "Accepter que les cookies essentiels",
   "cookies.alert_settings" : "Gérer vos préférences",
-  "cookies.alert_text" : "Nous utilisons des cookies pour améliorer l\"expérience du visiteur. En cliquant sur « Accepter », vous marquez votre accord avec l\"utilisation de ces cookies.",
+  "cookies.alert_text" : "En cliquant sur 'Accepter tous les cookies', vous acceptez que nous stockions des cookies sur votre ordinateur. Cela nous permet d'offrir une meilleure expérience utilisateur et d'analyser l'utilisation du site web. En cliquant sur 'Gérer vos préférences', vous pouvez choisir les cookies que vous autorisez. Seuls les cookies essentiels sont nécessaires au bon fonctionnement du site web et ne peuvent être refusés.",
   "cookies.alert_title" : "Ce site web utilise des cookies",
   "cookies.setting_analytics" : "Cookies analytiques",
   "cookies.setting_analytics_text" : "nous permettent d\"analyser et d\"améliorer l\"expérience utilisateur du site web.",
@@ -13,7 +13,7 @@
   "cookies.settings_accept_all" : "Accepter tous les cookies",
   "cookies.settings_cancel" : "Annuler",
   "cookies.settings_close" : "Fermer",
-  "cookies.settings_save" : "Enregistrer",
+  "cookies.settings_save" : "Sauvegarder mon choix",
   "cookies.settings_title" : "Cookie settings",
   "cookies.settings_text" : "Notre site web utilise trois niveaux de cookies. Vous pouvez adapter vos préférences à tout moment. Vous trouverez davantage d\"informations sur les cookies et la manière dont nous les utilisons dans notre <a href=\"%policyUrl%\">politique en matière de cookies</a>."
 }

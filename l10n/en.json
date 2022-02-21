@@ -2,7 +2,7 @@
     "cookies.alert_accept" : "Agreed",
     "cookies.alert_essentials_only": "Accept only necessary cookies",
     "cookies.alert_settings" : "Adjust your preferences",
-    "cookies.alert_text" : "This website uses cookies to improve your browsing experience. By clicking on ‘Agree’, you accept the use of these cookies.",
+    "cookies.alert_text" : "By choosing 'Accept all cookies' you agree to the use of cookies to help us provide you with a better user experience and to analyse website usage. By clicking 'Adjust your preferences' you can choose which cookies to allow. Only the essential cookies are necessary for the proper functioning of our website and cannot be refused.",
     "cookies.alert_title" : "This website uses cookies",
     "cookies.setting_analytics" : "Analytical cookies",
     "cookies.setting_analytics_text" : "allow us to analyse website use and to improve the visitor\"s experience.",
@@ -13,7 +13,7 @@
     "cookies.settings_accept_all" : "Accept all cookies",
     "cookies.settings_cancel" : "Cancel",
     "cookies.settings_close" : "Close",
-    "cookies.settings_save" : "Save",
+    "cookies.settings_save" : "Save my selection",
     "cookies.settings_title" : "Cookie settings",
     "cookies.settings_text" : "Our website keeps three levels of cookies. You can adjust your preferences at any time. If you want more information about what cookies are and which cookies we collect, please read our <a href=\"%policyUrl%\">cookie policy</a>."
 }

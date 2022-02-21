@@ -19,12 +19,15 @@
         </p>
     </div>
     <div class="lcc-modal__actions">
-        <a href="#" class="lcc-button lcc-button--link js-lcc-settings-toggle">
-            {translate key="cookies.alert_settings"}
-        </a>
         <button type="button" class="lcc-button js-lcc-accept">
             {translate key="cookies.alert_accept"}
         </button>
+        <a href="#" class="lcc-button lcc-button--link js-lcc-essentials">
+            {translate key="cookies.alert_essentials_only"}
+        </a>
+        <a href="#" class="lcc-button lcc-button--link js-lcc-settings-toggle">
+            {translate key="cookies.alert_settings"}
+        </a>
     </div>
 </div>
 

@@ -25,7 +25,7 @@ Right underneath the `content_body` block
 
 Add the link to the settings on your page.
 ```
-<a href="javascript:void(0)" class="js-lcc-settings-toggle">cookie settings</a>
+<a href="javascript:void(0)" class="js-lcc-settings-toggle">{'cookies.settings_title'|translate}</a>
 ```
 
 In your `parameters.json` you set the url to your cookie policy page.
@@ -66,4 +66,7 @@ Cookie settings can be altered in parameters too:
   "cookies.custom_style": false
 ```
 
- 
+ ## UPDATING FROM 2.2.0 TO 2.3.0
+ Translations have changes in this update. If you overwrite some in your own project, be sure to check if they are up to date.
+
+

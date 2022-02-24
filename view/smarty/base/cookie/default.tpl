@@ -20,7 +20,7 @@
     </div>
     <div class="lcc-modal__actions">
         <button type="button" class="lcc-button js-lcc-accept">
-            {translate key="cookies.alert_accept"}
+            {translate key="cookies.settings_accept_all"}
         </button>
         <a href="#" class="lcc-button lcc-button--link js-lcc-essentials">
             {translate key="cookies.alert_essentials_only"}

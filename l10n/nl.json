@@ -16,6 +16,6 @@
     "cookies.settings_close" : "Sluiten",
     "cookies.settings_save" : "Mijn keuze bewaren",
     "cookies.settings_title" : "Cookieinstellingen",
-    "cookies.settings_text" : "Onze website houdt drie niveaus van cookies bij. Je kan zelf je voorkeuren op elk moment aanpassen. Meer informatie over wat cookies zijn en welke cookies we verzamelen kan je lezen in ons <a href=\"%policyUrl%\">cookiebeleid</a>.",
+    "cookies.settings_text" : "Onze website bewaart vier soorten cookies. Je kan zelf op elk moment kiezen welke je aanvaardt en welke niet. Meer informatie over wat cookies zijn en welke types cookies we verzamelen kan je lezen in ons <a href=\"%policyUrl%\">cookiebeleid</a>.",
     "cookies.settings_accept_all": "Alle cookies aanvaarden"
 }

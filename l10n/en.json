@@ -17,5 +17,5 @@
     "cookies.settings_close" : "Close",
     "cookies.settings_save" : "Save my selection",
     "cookies.settings_title" : "Cookie settings",
-    "cookies.settings_text" : "Our website keeps three levels of cookies. You can adjust your preferences at any time. If you want more information about what cookies are and which cookies we collect, please read our <a href=\"%policyUrl%\">cookie policy</a>."
+    "cookies.settings_text" : "Our website stores four types of cookies. At any time you can choose which cookies you accept and which you refuse. You can read more about what cookies are and what types of cookies we store in our <a href=\"%policyUrl%\">cookie policy</a>."
 }

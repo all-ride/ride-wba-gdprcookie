@@ -62,6 +62,15 @@
                 </p>
             </div>
             <div class="lcc-modal__section">
+                <label for="lcc-checkbox-functional" class="lcc-label">
+                    <input type="checkbox" id="lcc-checkbox-functional" disabled="disabled" checked="checked">
+                    <span>{translate key="cookies.setting_functional"}</span>
+                </label>
+                <p class="lcc-text">
+                    {translate key="cookies.setting_functional_text"}
+                </p>
+            </div>
+            <div class="lcc-modal__section">
                 <label for="lcc-checkbox-analytics" class="lcc-label">
                     <input type="checkbox" id="lcc-checkbox-analytics">
                     <span>{translate key="cookies.setting_analytics"}</span>

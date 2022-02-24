@@ -19,12 +19,15 @@
         </p>
     </div>
     <div class="lcc-modal__actions">
+        <button type="button" class="lcc-button js-lcc-accept">
+            {translate key="cookies.settings_accept_all"}
+        </button>
+        <a href="#" class="lcc-button lcc-button--link js-lcc-essentials">
+            {translate key="cookies.alert_essentials_only"}
+        </a>
         <a href="#" class="lcc-button lcc-button--link js-lcc-settings-toggle">
             {translate key="cookies.alert_settings"}
         </a>
-        <button type="button" class="lcc-button js-lcc-accept">
-            {translate key="cookies.alert_accept"}
-        </button>
     </div>
 </div>
 
@@ -59,6 +62,15 @@
                 </p>
             </div>
             <div class="lcc-modal__section">
+                <label for="lcc-checkbox-functional" class="lcc-label">
+                    <input type="checkbox" id="lcc-checkbox-functional" disabled="disabled" checked="checked">
+                    <span>{translate key="cookies.setting_functional"}</span>
+                </label>
+                <p class="lcc-text">
+                    {translate key="cookies.setting_functional_text"}
+                </p>
+            </div>
+            <div class="lcc-modal__section">
                 <label for="lcc-checkbox-analytics" class="lcc-label">
                     <input type="checkbox" id="lcc-checkbox-analytics">
                     <span>{translate key="cookies.setting_analytics"}</span>
@@ -79,9 +91,6 @@
         </div>
     </div>
     <div class="lcc-modal__actions">
-        <a href="#" class="lcc-button lcc-button--link js-lcc-settings-toggle">
-            {translate key="cookies.settings_cancel"}
-        </a>
         <button type="button" class="lcc-button js-lcc-settings-save">
             {translate key="cookies.settings_save"}
         </button>

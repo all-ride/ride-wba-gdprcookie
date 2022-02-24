@@ -1,5 +1,6 @@
 # Changelog 
-
+## [2.3.0] - 2022-02-24
+- Updated cookie settings to be compliant with current GDPR standard
 ## [2.2.0] - 2020-11-09
 - Changed implode function to work with php 7.4
 ## [2.1.9]

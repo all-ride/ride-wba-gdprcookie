@@ -1,4 +1,6 @@
 # Changelog 
+## [2.3.1] - 2022-04-22
+- Added exception on check if should be added
 ## [2.3.0] - 2022-02-24
 - Updated cookie settings to be compliant with current GDPR standard
 ## [2.2.0] - 2020-11-09

@@ -65,25 +65,29 @@ class GdprApplicationListener {
      * @return null
      */
     public function addGdpr(Event $event) {
-        $web = $event->getArgument('web');
+        try {
+            $web = $event->getArgument('web');
 
-        $request = $web->getRequest();
-        $response = $web->getResponse();
-        $view = $response->getView();
-        $this->getLocale($request);
+            $request = $web->getRequest();
+            $response = $web->getResponse();
+            $view = $response->getView();
+            $this->getLocale($request);
 
-        if ($this->shouldAddGdpr($view)) {
+            if ($this->shouldAddGdpr($view)) {
 
-            if (!$this->customStyle) {
-                $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
+                if (!$this->customStyle) {
+                    $view->addStyle($request->getBaseUrl().'/'.self::STYLES);
+                }
+                $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
+                $template = $this->templateService->createTemplate('base/cookie/default', ['policyUrl' => $this->policyUrl]);
+                $gdprTemplate = $this->templateService->render($template);
+                $view->getTemplate()->set('gdprTemplate', $gdprTemplate);
             }
-            $view->addJavascript($request->getBaseUrl().'/'.self::SCRIPT_COOKIEBANNER);
-            $template = $this->templateService->createTemplate('base/cookie/default', ['policyUrl' => $this->policyUrl]);
-            $gdprTemplate = $this->templateService->render($template);
-            $view->getTemplate()->set('gdprTemplate', $gdprTemplate);
-        }
 
-        return null;
+            return null;
+        } catch (\Exception $e) {
+            return null;
+        }
     }
 
     /**

@@ -1,4 +1,6 @@
 # Changelog 
+## [2.4.0] - 2024-03-04
+- Added Callback for Google Consent Mode
 ## [2.3.1] - 2022-04-22
 - Added exception on check if should be added
 ## [2.3.0] - 2022-02-24

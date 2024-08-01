@@ -103,7 +103,7 @@ class GdprApplicationListener {
     }
 
     private function getLocale(Request $request) {
-        if (is_array($this->policyUrl) && $request->getRoute()->getLocale()) {
+        if (is_array($this->policyUrl) && $request->getRoute() && $request->getRoute()->getLocale()) {
             $this->policyUrl = $this->policyUrl[$request->getRoute()->getLocale()];
         } elseif(is_array($this->policyUrl)) {
             $this->policyUrl = array_shift($this->policyUrl);
